@@ -1,0 +1,22 @@
+{
+  "name": "nuevoretosaucedemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=${NODE_ENV:-default} npx bddgen test --tags=${TAGS:-@default} && npx playwright test",
+    "install:pw": "npx playwright install",
+    "show-report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "cross-env": "^10.1.0",
+    "playwright-bdd": "^9.2.0"
+  }
+}

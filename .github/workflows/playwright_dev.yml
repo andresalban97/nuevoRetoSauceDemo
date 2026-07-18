@@ -1,0 +1,36 @@
+name: Playwright Tests DEV
+
+on:
+  workflow_dispatch:
+    inputs:
+      TAGS:
+        description: 'Tags para casos de prueba'
+        required: true
+        default: '@default'
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npm run install:pw
+
+      - name: Run tests
+        env:
+          NODE_ENV: dev
+          TAGS: ${{ inputs.TAGS }}
+        run: npm test

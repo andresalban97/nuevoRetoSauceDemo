@@ -1,0 +1,29 @@
+{
+
+    "LoginPage":{
+
+        
+        "username":"input[id='user-name']",
+        "password":"input[id='password']",
+        "loginButton":"input[id='login-button']",
+        "errorMessage":"//*[@id='login_button_container']/div/form/div[3]"
+    },
+    "ShopingPage":{
+        "CommonProduct":"button[id='add-to-cart-",
+        "figureCart":"//*[@id='shopping_cart_container']"
+       
+
+    },"CartPage":{
+        "checkoutButton":"button[id='checkout']",
+        "firstname":"input[id='first-name']",
+        "lastname":"input[id='last-name']",
+        "postalcode":"input[id='postal-code']",
+        "continueButton":"input[id='continue']",
+        "finishButton":"button[id='finish']",
+        "confirmationMessage":"Thank you for your order!"
+
+    }
+
+}
+
+
